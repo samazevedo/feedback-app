@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { Fragment } from 'react'
+import { Header } from './components/Header.component'
+import { FeedbackItem } from './FeedbackItem.component'
 
 export default function App() {
     return (
-        <div>
-            <h1>Hello World</h1>
-        </div>
+        <Fragment>
+            <Header />
+            <div className='container'>
+                <FeedbackItem />
+            </div>
+        </Fragment>
     )
 }
