@@ -90,3 +90,11 @@ header {
     margin: 0 auto;
     max-width: 800px;
 }
+.feedback-stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 0 20px;
+}
