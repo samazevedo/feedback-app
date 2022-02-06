@@ -8,7 +8,7 @@ export const Header = ({ title, bgColor, textColor }) => {
     }
     return (
         <header style={headerStyle}>
-            <div className='container'>{title}</div>
+            <div className='container'>{title.toUpperCase()}</div>
         </header>
     )
 }
@@ -17,8 +17,8 @@ Header.defaultProps = {
     bgColor: '#DEDBF8',
     textColor: '#6e6a6a',
 }
-Header.PropTypes = {
-    title: PropTypes.string.isRequired,
+Header.propTypes = {
+    title: PropTypes.string,
     bgColor: PropTypes.string,
     textColor: PropTypes.string,
 }

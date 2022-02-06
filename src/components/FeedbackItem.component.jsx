@@ -1,10 +1,18 @@
+import React from 'react'
+import { Card } from './Card.component'
+import PropTypes from 'prop-types'
+
 export const FeedbackItem = ({ item }) => {
     return (
-        <div className='card'>
+        <Card>
             <div className='num-display'>{item.rating}</div>
             <div className='text-display'>
-                <p>{item}</p>
+                <p>{item.text}</p>
             </div>
-        </div>
+        </Card>
     )
+}
+
+FeedbackItem.propTypes = {
+    item: PropTypes.object.isRequired,
 }

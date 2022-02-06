@@ -60,3 +60,13 @@ header {
     background-color: #f069d7;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5), 0px 0px 5px rgba(0, 0, 0, 0.1);
 }
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+.card.reverse {
+    background-color: #241524;
+    color: #b8b6b6;
+}

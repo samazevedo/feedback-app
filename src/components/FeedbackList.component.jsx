@@ -1,5 +1,6 @@
 import React from 'react'
 import { FeedbackItem } from '../components/FeedbackItem.component'
+import PropTypes from 'prop-types'
 
 export const FeedbackList = ({ feedback }) => {
     if (!feedback || feedback.length === 0) {
@@ -11,9 +12,19 @@ export const FeedbackList = ({ feedback }) => {
     }
     return (
         <div className='feedback-list'>
-            {feedback.map((item, index) => {
-                ;<FeedbackItem key={index} item={item} />
-            })}
+            {feedback.map((item) => (
+                <FeedbackItem key={item.id} item={item} />
+            ))}
         </div>
     )
+}
+
+FeedbackList.protoTypes = {
+    feedback: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.number.isRequired,
+            rating: PropTypes.number.isRequired,
+            text: PropTypes.string.isRequired,
+        }).isRequired
+    ),
 }
