@@ -98,3 +98,17 @@ header {
     max-width: 800px;
     padding: 0 20px;
 }
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.btn.btn-primary {
+    background-color: #471f40;
+    color: #fff;
+}
+.btn.btn-secondary {
+    background-color: #f069d7;
+    color: #fff;
+}
