@@ -143,3 +143,41 @@ header {
     font-size: 1rem;
     color: #6e6a6a;
 }
+.select-rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+    list-style: none;
+}
+.select-rating li {
+    position: relative;
+    background-color: #f064d6;
+    color: #fff;
+    margin: 0 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.select-rating input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+.select-rating input:checked + label {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f069d7;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}

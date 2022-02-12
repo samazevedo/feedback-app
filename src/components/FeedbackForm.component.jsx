@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import { Card } from './Card.component'
 import { Button } from './Button.component'
-
+import { SelectRating } from './SelectRating.component'
 export const FeedbackForm = () => {
     const [text, setText] = useState('')
+    const [rating, setRating] = useState(0)
     const [btnDisabled, setBtnDisabled] = useState(true)
     const [message, setMessage] = useState('')
 
@@ -25,6 +26,7 @@ export const FeedbackForm = () => {
         <Card>
             <form>
                 <h2>How would you rate your service with us?</h2>
+                <SelectRating select={(rating) => setRating(rating)} />
                 <div className='input-group'>
                     <input
                         onChange={handleTextChange}
