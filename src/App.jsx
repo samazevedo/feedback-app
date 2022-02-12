@@ -10,7 +10,9 @@ export default function App() {
     const [feedback, setFeedback] = useState(FeedbackData)
 
     const addFeedbackItem = (newFeedbackItem) => {
-        newFeedbackItem.id = +uuidv4()
+        // need to solve id problem here
+        newFeedbackItem.id = uuidv4()
+
         setFeedback([newFeedbackItem, ...feedback])
     }
     const deleteFeedbackItem = (id) => {
