@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import { Card } from './Card.component'
 import { Button } from './Button.component'
 import { SelectRating } from './SelectRating.component'
-export const FeedbackForm = () => {
+
+export const FeedbackForm = ({ handleAdd }) => {
     const [text, setText] = useState('')
     const [rating, setRating] = useState(0)
     const [btnDisabled, setBtnDisabled] = useState(true)
@@ -22,9 +23,21 @@ export const FeedbackForm = () => {
         }
         setText(e.target.value)
     }
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        if (text.trim().length > 10) {
+            const newFeedbackItem = {
+                text: text,
+                rating: rating,
+            }
+            handleAdd(newFeedbackItem)
+            setText('')
+        }
+    }
+
     return (
         <Card>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <h2>How would you rate your service with us?</h2>
                 <SelectRating select={(rating) => setRating(rating)} />
                 <div className='input-group'>
